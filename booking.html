@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book an Appointment</title>
+    <link rel="stylesheet" href="booking.css">
+</head>
+<body>
+    <header>
+        <h1>Book an Appointment</h1>
+    </header>
+
+    <section class="booking-form">
+        <h2>Add Appointment</h2>
+        <form id="appointmentForm">
+            <label for="patientName">Patient Name:</label>
+            <input type="text" id="patientName" required>
+
+            <label for="doctor">Doctor:</label>
+            <select id="doctor" required>
+                <option value="">Select a Doctor</option>
+                <option value="Dr. John Doe">Dr. John Doe (Cardiology)</option>
+                <option value="Dr. Jane Smith">Dr. Jane Smith (Neurology)</option>
+                <option value="Dr. Emily Johnson">Dr. Emily Johnson (Pediatrics)</option>
+            </select>
+
+            <label for="date">Date:</label>
+            <input type="date" id="date" required>
+
+            <label for="time">Time:</label>
+            <input type="time" id="time" required>
+
+            <button type="submit">Add Appointment</button>
+        </form>
+    </section>
+
+    <section class="appointment-list">
+        <h2>Appointment List</h2>
+        <input type="text" id="searchInput" placeholder="Search by patient, doctor, or date">
+        <ul id="appointmentList"></ul>
+    </section>
+
+    <script src="booking.js"></script>
+</body>
+</html>
